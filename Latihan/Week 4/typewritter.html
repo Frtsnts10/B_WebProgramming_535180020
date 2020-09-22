@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Typewritter</title>
+
+        <style>
+            #display {
+                border: 1px solid gray;
+                width: 70%;
+                padding: 5px;
+            }
+
+            button {
+                width: 30px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p id="display">Click on the buttons below.</p>
+        <button onclick="display('a')">A</button>
+        <button onclick="display('b')">B</button>
+        <button onclick="display('c')">C</button>
+        <button onclick="display('d')">D</button>
+        <button onclick="display('e')">E</button>
+        <button onclick="display('f')">F</button>
+        <br><br>
+        <button onclick="display('g')">G</button>
+        <button onclick="display('h')">H</button>
+        <button onclick="display('i')">I</button>
+        <button onclick="display('j')">J</button>
+        <button onclick="display('k')">K</button>
+        <button onclick="display('l')">L</button>
+        <button style="width: 64px;" onclick="display(' ')">Space</button>
+        <br><br>
+        <button style="width: 64px;" onclick="clear()">Celar</button>
+        <button id="capslock" style="width: 100px;" onclick="toogleCaps()">Caps Lock</button>
+
+        <script>
+            var first = true;
+            var capslock = false;
+
+            function clearDisplay() {
+                document.getElementById("display").innerHTML = "Click on the button below";
+                first = true;
+            }
+
+            function toogleCaps() {
+                capslock = !capslock;
+                if (capslock) {
+                    str = "CAPS LOCK";
+                }
+                else {
+                    str = "Caps Lock";
+                }
+            }
+        </script>
+    </body>
+</html>
+

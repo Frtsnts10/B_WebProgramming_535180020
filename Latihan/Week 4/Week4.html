@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Materi Javascript</title>
+    </head>
+
+    <body>
+        
+        <button onclick="alert('Hello Bro!')">Click me !</button>
+        <p id="content">This is the initial content</p> 
+
+        <button onclick="showContent()">Click me !</button>
+        <p id="content">This is the initial content</p>
+
+        <script>
+            function showContent() {
+                for(i = 0; i < 10; i++)
+                console.log("Looping i = " + i)
+            }
+        </script>
+
+        <button onclick="showContent()">Click me !</button>
+        <p id="content">This is the initial content</p>
+
+        <script>
+            function showContent() {
+                document.getElementById("content").innerHTML = "<b>" + Date() + "<b>";
+            }
+        </script>
+
+        <button onclick="showContent()">Click me !</button>
+        <p id="content">This is the initial content</p>
+
+        <script>
+            function showContent(num) {
+                var x = 3;
+                var res = num + x;
+
+                var p = document.getElementById("content");
+                p.innerHTML = res;
+            }
+        </script>
+    </body>
+</html>
